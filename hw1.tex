@@ -1,0 +1,169 @@
+\documentclass[reqno]{amsart} 
+\usepackage{amssymb,latexsym,amsmath,amscd,graphicx,setspace,amsthm,verbatim,enumitem}
+\usepackage[margin = 3 cm]{geometry}
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{question}{Question}
+\newtheorem{problem}{Problem}
+      
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\newenvironment{solution1}{\paragraph{\emph{Solution $1$}.}}{\hfill$\square$}
+\newenvironment{solution2}{\paragraph{\emph{Solution $2$}.}}{\hfill$\square$}
+\newenvironment{solution3}{\paragraph{\emph{Solution $3$}.}}{\hfill$\square$}
+
+\begin{document} 
+
+\title[Homework 1]{Homework 1}
+
+\date{\today} 
+\maketitle 
+
+
+\begin{problem}
+\hspace{1cm}
+\begin{enumerate}
+\item Let $a,b \in \mathbb{Z}$.  Show that ${\rm gcd}(a,b)=1$ if and only if there exist $s,t \in \mathbb{Z}$ such that $as + bt = 1$.
+\item Let $a,b \in \mathbb{Z}$ and let $d \in \mathbb{Z}_{\ge 2}$.  Is it true that if there exist $s,t \in \mathbb{Z}$ such that $as + bt = d$, then ${\rm gcd}(a,b) = d$?  If yes, prove this, otherwise, give a counterexample.
+\end{enumerate}
+\end{problem}
+
+\begin{solution1}
+
+\end{solution1}
+
+
+\begin{problem}
+Show the following generalization of Euclid's lemma.  Let $a,b,c \in \mathbb{Z}$ and assume that $a \mid bc$.  Show that if ${\rm gcd}(a,b)=1$, then $a \mid c$.
+\end{problem}
+
+\begin{solution1}
+
+\end{solution1}
+
+
+
+
+\begin{problem}
+Show that there are infinitely many primes $p \in \mathbb{N}$ such that $p \equiv 1 \pmod{4}$.  For a hint, see Exercise 1.2 in Jarvis's book.
+\end{problem}
+\begin{solution1}
+
+\end{solution1}
+
+
+For the problems below, $F$ will be a field.  You can look up the general definition of a field, but  for now I am having in mind $\mathbb{Q},\mathbb{R},\mathbb{C}$ or a finite field such as $\mathbb{F}_{p}$.  We consider the ring $F[T]$ of polynomials with coefficients in $F$ in the variable $T$ with the usual addition and multiplication of polynomials.  We have the usual degree of a polynomial for which we agree that the zero polynomial has degree $-\infty$.
+\begin{problem}
+Show that the degree function ${\rm deg}:F[T] \smallsetminus \{ 0\} \rightarrow \mathbb{Z}_{\ge 0 }$ satisfies the following three properties:
+\begin{enumerate}
+\item ${\rm deg}(f(T)) = -\infty$ if and only if $f(T) = 0$,
+\item ${\rm deg}(f(T) \cdot g(T)) = {\rm deg}(f(T)) + {\rm deg}(g(T))$,
+\item ${\rm deg}(f(T) + g(T)) \le {\rm max}\{{\rm deg}(f(T)),{\rm deg}(g(T)) \}$.
+\end{enumerate}
+\end{problem}
+\begin{solution1}
+
+\end{solution1}
+
+\begin{problem}
+Show that $F[T]$ is an integral domain, meaning that if $f(T)g(T) =0$, then either $f(T) = 0$ or $g(T) = 0$.
+\end{problem}
+\begin{solution1}
+
+\end{solution1}
+
+We need the following definition:
+\begin{definition}
+A unit $f(T) \in F[T]$ is a polynomial for which there exists another polynomial $g(T) \in F[T]$ such that $f(T)g(T) = 1$.  The collection of units in $F[T]$ is denoted by $F[T]^{\times}$.  
+\end{definition}
+(Convince yourself that $F[T]^{\times}$ is a group with multiplication.)
+\begin{problem}
+Let $F$ be a field and let $f(T) \in F[T]$.  Show that $f(T) \in F[T]^{\times}$ if and only if ${\rm deg}(f(T)) = 0$, and show that $F[T]^{\times} = F^{\times}$, i.e. the units of $F[T]$ are precisely the nonzero constant polynomials.
+\end{problem}
+\begin{solution1}
+
+\end{solution1}
+
+We need another definition:
+\begin{definition}
+Let $f(T), g(T) \in F[T]$.  One says that $f(T) \mid g(T)$ if there exists $h(T) \in F[T]$ such that $h(T) f(T) = g(T)$.
+\end{definition}
+
+Moreover, recall the division theorem for polynomials (which is obtained from long division, make sure to remember that):  Given $f(T), g(T) \in F[T]$ with $g(T) \neq 0$, there exists $q(T), r(T) \in F[T]$ such that
+\begin{enumerate}
+\item $f(T) = q(T)g(T) + r(T)$,
+\item ${\rm deg}(r(T)) < {\rm deg}(g(T))$.
+\end{enumerate}  
+
+\begin{problem}
+Show that the quotient $q(T)$ and the remainder $r(T)$ in the division theorem above are unique.
+\end{problem}
+\begin{solution1}
+
+\end{solution1}
+
+\begin{problem}
+Let $f(T) \in F[T]$ be a nonzero polynomial.  Show that $\alpha \in F$ is a root of $f(T)$ if and only if there exists $q(T) \in F[T]$ such that $f(T) = (T-\alpha) q(T)$.
+\end{problem}
+\begin{solution1}
+
+\end{solution1}
+
+We need another definition:
+\begin{definition}
+Let $f(T) \in F[T]$ be a polynomial that is nonzero and not a unit.  
+\begin{enumerate}
+\item The polynomial $f(T)$ is called irreducible if whenever $f(T) = g(T) h(T)$, then either $g(T) \in F[T]^{\times}$ or $h(T) \in F[T]^{\times}$.  \item Moreover, $f(T)$ is called prime if whenever $f(T) \mid g(T) h(T)$, then either $f(T) \mid g(T)$ or $f(T) \mid h(T)$.
+\end{enumerate}
+\end{definition}
+
+\begin{problem}
+Show that a prime polynomial $f(T) \in F[T]$ is necessarily irreducible.
+\end{problem}
+\begin{solution1}
+
+\end{solution1}
+
+\begin{problem}
+\hspace{1cm}
+\begin{enumerate}
+\item Show that a polynomial of degree $1$ is irreducible.
+\item Show that a polynomial of degree $2$ or $3$ is irreducible if and only if it has no root in $F$.
+\item If a polynomial of degree $4$ has no root in $F$, then is it necessarily irreducible?  If yes, prove this, otherwise, give a counterexample.
+\end{enumerate}
+
+\end{problem}
+
+\begin{solution1}
+
+\end{solution1}
+
+\begin{problem}
+Show that there are infinitely many irreducible polynomials in $F[T]$.  (Make sure your proof works for a finite field as well such as $\mathbb{F}_{p}$...)
+\end{problem}
+\begin{solution1}
+
+\end{solution1}
+
+\begin{problem}
+Show that every $f(T) \in F[T]$ that is nonzero and not a unit can be written as a product of irreducible polynomials.
+\end{problem}
+\begin{solution1}
+
+\end{solution1}
+
+
+
+
+
+\end{document} 
+
+
+
